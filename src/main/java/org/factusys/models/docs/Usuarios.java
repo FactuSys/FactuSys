@@ -1,5 +1,6 @@
 package org.factusys.models.docs;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.factusys.models.enums.Rol;
@@ -11,8 +12,12 @@ import org.factusys.models.enums.Rol;
 @Builder
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "usuarios")
 public class Usuarios {
 
+    @Id
+    @EqualsAndHashCode.Include
     private String idUser;
     private String nombre;
     private String email;
