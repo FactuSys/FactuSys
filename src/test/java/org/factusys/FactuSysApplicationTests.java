@@ -1,4 +1,4 @@
-package org.example.factusys;
+package org.factusys;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package org.example.factusys;
+package org.factusys;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
