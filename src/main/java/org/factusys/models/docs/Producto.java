@@ -26,7 +26,8 @@
         private String descripcion;
         private float precioCosto;
         private float precioVenta;
-        private short catidadStock;
+        private short stockMinimo;
+        private short stockActual;
 
         @Embedded
         private Impuesto impuesto;
