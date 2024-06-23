@@ -12,7 +12,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Entity
 @Table(name = "clientes")
-public class Clientes {
+public class Cliente {
 
     @Id
     @EqualsAndHashCode.Include

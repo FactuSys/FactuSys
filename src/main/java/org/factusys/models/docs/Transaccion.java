@@ -22,6 +22,7 @@ public class Transaccion {
     private String idTransaccion;
     @OneToMany(mappedBy = "transaccion", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Producto> productos;
+
     private float total;
     private String fecha;
     private String idFactura;

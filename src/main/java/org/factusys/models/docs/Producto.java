@@ -3,7 +3,7 @@
 
     import jakarta.persistence.*;
     import lombok.*;
-    import org.factusys.models.enums.Categoria;
+    import org.factusys.models.subdocs.Categoria;
     import org.factusys.models.subdocs.Impuesto;
 
     import java.util.List;
@@ -26,13 +26,19 @@
         private String descripcion;
         private float precioCosto;
         private float precioVenta;
+        private short catidadStock;
+
         @Embedded
         private Impuesto impuesto;
+
+        @ManyToOne
+        @JoinColumn(name = "categoria_id")
         private Categoria categoria;
-        private short catidadStock;
+
         @ManyToOne
         @JoinColumn(name = "transaccion_id")
         private Transaccion transaccion;
+
         @ManyToMany(mappedBy = "productos")
         private List<Inventario> inventarios;
 
